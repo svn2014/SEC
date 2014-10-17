@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Security.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="HistoryDBType" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Oracle</Value>
+    </Setting>
+    <Setting Name="HistoryDBConn" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.190.60.21)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=finchina1)));User Id=caihui;Password=caihui;</Value>
+    </Setting>
+    <Setting Name="HistoryDataVendor" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CaiHui</Value>
+    </Setting>
+    <Setting Name="RealtimeDBType" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="RealtimeDBConn" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="RealtimeDataVendor" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Sina</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

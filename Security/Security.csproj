@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{42368129-3431-44D1-991D-8018AAB89034}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Security</RootNamespace>
+    <AssemblyName>Security</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\DataManager.cs" />
+    <Compile Include="Common\Message.cs" />
+    <Compile Include="Database\ADBInstance.cs" />
+    <Compile Include="Database\DBInstanceOracle.cs" />
+    <Compile Include="DataVendor\AHistoryDataVendor.cs" />
+    <Compile Include="DataVendor\ARealtimeDataVendor.cs" />
+    <Compile Include="DataVendor\CaiHui\HistoryDataVendorCH_Bond.cs" />
+    <Compile Include="DataVendor\CaiHui\HistoryDataVendorCH_Fund.cs" />
+    <Compile Include="DataVendor\CaiHui\HistoryDataVendorCH_Future.cs" />
+    <Compile Include="DataVendor\CaiHui\HistoryDataVendorCH_Index.cs" />
+    <Compile Include="DataVendor\CaiHui\HistoryDataVendorCH_Equity.cs" />
+    <Compile Include="DataVendor\CaiHui\HistoryDataVendorCH.cs" />
+    <Compile Include="DataVendor\CSV\HistoryDataVendorCSV.cs" />
+    <Compile Include="DataVendor\Sina\HistoryDataVendorSina.cs" />
+    <Compile Include="DataVendor\Sina\RealtimeDataVendorSina.cs" />
+    <Compile Include="Market\0-Selectors\EquitySelector.cs" />
+    <Compile Include="Market\S-Future\Future.cs" />
+    <Compile Include="Market\S-Future\FutureGroup.cs" />
+    <Compile Include="Market\S-Index\IndexComponents.cs" />
+    <Compile Include="Market\S-Other\Deposit.cs" />
+    <Compile Include="Market\S-Other\DepositGroup.cs" />
+    <Compile Include="Market\S-Other\Repo.cs" />
+    <Compile Include="Market\S-Other\RepoGroup.cs" />
+    <Compile Include="Market\T-TimeSeries\HistoryBondValue.cs" />
+    <Compile Include="Market\T-TimeSeries\T-HistoryItem\HistoryItemBondValue.cs" />
+    <Compile Include="Market\T-TimeSeries\HistoryDividend.cs" />
+    <Compile Include="Market\T-TimeSeries\T-HistoryItem\HistoryItemDividend.cs" />
+    <Compile Include="Portfolio\DataAdapter\IPortfolioDataAdapter.cs" />
+    <Compile Include="Portfolio\DataAdapter\PortfolioAdapterYSS.cs" />
+    <Compile Include="Portfolio\Portfolio.cs" />
+    <Compile Include="Portfolio\PortfolioGroup.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Market\ASecurity.cs" />
+    <Compile Include="Market\ASecurityGroup.cs" />
+    <Compile Include="Market\C-Category\ACategory.cs" />
+    <Compile Include="Market\C-Category\AFundCategory.cs" />
+    <Compile Include="Market\C-Category\FundCategoryGS.cs" />
+    <Compile Include="Market\S-Bond\Bond.cs" />
+    <Compile Include="Market\S-Bond\BondGroup.cs" />
+    <Compile Include="Market\S-Equity\Equity.cs" />
+    <Compile Include="Market\S-Equity\EquityGroup.cs" />
+    <Compile Include="Market\S-Fund\ListedFund.cs" />
+    <Compile Include="Market\S-Fund\StructuredFund.cs" />
+    <Compile Include="Market\0-Selectors\IndexSelector.cs" />
+    <Compile Include="Market\S-Fund\MutualFund.cs" />
+    <Compile Include="Market\S-Fund\FundGroup.cs" />
+    <Compile Include="Market\0-Selectors\FundSelector.cs" />
+    <Compile Include="Market\S-Index\Index.cs" />
+    <Compile Include="Market\S-Index\IndexGroup.cs" />
+    <Compile Include="Market\T-TimeSeries\ARealTimeSeries.cs" />
+    <Compile Include="Market\T-TimeSeries\RealtimeNetAssetValue.cs" />
+    <Compile Include="Market\T-TimeSeries\RealtimeTradePrice.cs" />
+    <Compile Include="Market\T-TimeSeries\T-HistoryItem\AHistoryTimeItem.cs" />
+    <Compile Include="Market\T-TimeSeries\T-HistoryItem\Report\HistoryItemMutualFundReport.cs" />
+    <Compile Include="Market\T-TimeSeries\T-HistoryItem\HistoryItemNetAssetValue.cs" />
+    <Compile Include="Market\T-TimeSeries\T-HistoryItem\HistoryItemTradingPrice.cs" />
+    <Compile Include="Market\T-TimeSeries\T-HistoryItem\Report\AHistoryItemReport.cs" />
+    <Compile Include="Market\T-TimeSeries\ADatePeriod.cs" />
+    <Compile Include="Market\T-TimeSeries\AHistoryTimeSeries.cs" />
+    <Compile Include="Market\T-TimeSeries\HistoryTradePrice.cs" />
+    <Compile Include="Market\T-TimeSeries\HistoryFundReport.cs" />
+    <Compile Include="Market\T-TimeSeries\HistoryNetAssetValue.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
